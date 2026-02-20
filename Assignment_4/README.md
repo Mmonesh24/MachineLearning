@@ -1,27 +1,59 @@
 # Assignment 4: Binary Classification using Logistic Regression and SVM
 
-This assignment involves implementing and comparing two major machine learning algorithms—Logistic Regression and Support Vector Machines (SVM)—for the task of binary classification on the Spambase dataset.
+This repository contains a comparative study of **Logistic Regression** and **Support Vector Machines (SVM)** for binary classification tasks, applied to the **Spambase** dataset.
 
-## Code
-- `experiment4.ipynb`: Python notebook containing data preprocessing, exploratory data analysis, model training, hyperparameter tuning using Grid Search, and performance evaluation.
+## 🎯 Objective
+- Implement and optimize a **Logistic Regression** baseline model.
+- Implement **Support Vector Machines (SVM)** with various kernels (Linear, Polymer, RBF, Sigmoid).
+- Perform hyperparameter tuning using `GridSearchCV`.
+- Compare models based on Accuracy, Precision, Recall, F1-Score, and ROC-AUC.
 
-## Dataset
-- `spambase_csv.csv`: A dataset consisting of 4601 email instances, each described by 57 features (frequencies of specific words and characters) and a target label (1 for spam, 0 for non-spam).
+---
 
-## How to Run
-1. Ensure you have Python installed with the following libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, and `scikit-learn`.
-2. Open `experiment4.ipynb` in a Jupyter environment (VS Code, JupyterLab, etc.).
-3. Run the cells sequentially to:
-   - Load and explore the dataset.
-   - Preprocess the data (scaling and splitting).
-   - Train baseline and optimized Logistic Regression models.
-   - Compare different SVM kernels (Linear, Poly, RBF, Sigmoid).
-   - Evaluate model performance using Accuracy, F1-score, Confusion Matrices, and ROC curves.
+## 📊 Dataset: Spambase
+The experiment utilizes the Spambase dataset to classify emails as spam or non-spam.
 
-## Visualizations
-The experiment generates several plots saved in the `images/` directory, including:
-- Class distribution analysis.
-- Feature correlation maps.
-- Confusion matrices for both models.
-- ROC curves and AUC comparison.
-- Learning curves to assess model generalization.
+- **Total Samples:** 4601
+- **Features:** 57 numerical attributes (word/character frequencies).
+- **Target:** Spam (1) vs. Non-Spam (0).
+- **Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Spambase).
+
+---
+
+## 🔬 Methodology
+
+### 1. Data Preprocessing
+- **Scaling:** Applied `StandardScaler` to normalize feature distributions.
+- **Splitting:** 80-20 Train-Test split.
+
+### 2. Logistic Regression
+- **Optimization:** Tuned `C` (regularization strength) and `solver`.
+- **Goal:** Establish a linear baseline for classification performance.
+
+### 3. Support Vector Machine (SVM)
+- **Kernels Explored:** Linear, Polynomial, RBF, Sigmoid.
+- **Tuning:** Optimized `C` (margin hardness) and `gamma` (kernel coefficient).
+- **Observation:** proper kernel selection significantly impacts the decision boundary for high-dimensional data.
+
+---
+
+## 📁 Results & Visualizations
+The models were evaluated using comprehensive metrics. Visualizations are stored in the `images/` directory.
+
+- **Notebook:** [experiment4.ipynb](./experiment4.ipynb)
+- **Visualizations:**
+    - `class_distribution.png`
+    - `correlation_heatmap.png`
+    - `confusion_matrices.png`
+    - `roc_curves.png`
+    - `learning_curves.png`
+
+---
+
+## 🛠️ Requirements
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
+
+---
+*Author: Monesh M*

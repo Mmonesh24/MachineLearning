@@ -46,6 +46,11 @@ A technical repository documenting systematic research into statistical learning
 *   **Key Contributions**: Recursive feature splitting optimization, 5-Fold Cross-Validation for tree regularization. Implementation of bootstrap aggregation (Bagging) to minimize variance.
 *   **Discovery**: Validated the "Wisdom of the Crowd" through RF, achieving superior generalization on high-dimensional biomedical data (WDBC).
 
+### [Exp 7: Ensemble Models: Bagging, Boosting & Stacking](./Assignment_7/)
+*   **Objective**: Comprehensive evaluation of advanced ensemble strategies to reduce variance (Bagging) and bias (Boosting).
+*   **Key Contributions**: Implementation of AdaBoost, Gradient Boosting, and a heterogeneous Stacked Ensemble (SVM+NB+DT $\to$ LR).
+*   **Discovery**: Demonstrated how Stacking leverages diverse base learners to outperform individual strong classifiers on complex decision boundaries.
+
 ---
 
 ## 🛠️ Technological Stack

@@ -4,15 +4,16 @@ This repository contains a comparative study of **Decision Tree** and **Random F
 
 ## 🎯 Objective
 - Implement a **Decision Tree (DT)** and optimize its structure via 5-Fold Cross-Validation.
-- Extend the DT into a **Random Forest (RF)** ensemble to observe the reduction in variance and improvement in generalization.
-- Critically analyze the impact of tree depth, splitting criteria, and ensemble size on model robustness.
+- Extend the DT into a **Random Forest (RF)** ensemble to observe variance reduction.
+- Analyze the impact of tree depth, splitting criteria, and ensemble size on robustness.
 
 ---
 
 ## 📊 Dataset: Wisconsin Diagnostic Breast Cancer (WDBC)
 A classic high-dimensional biomedical dataset for diagnostic prediction.
+
 - **Total Samples:** 569
-- **Features:** 30 numerical attributes (Mean, Std Error, and "Worst" of 10 cell nucleus characteristics).
+- **Features:** 30 numerical attributes (Mean, Std Error, Worst).
 - **Target:** Malignant (M) vs. Benign (B).
 - **Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)).
 
@@ -21,27 +22,29 @@ A classic high-dimensional biomedical dataset for diagnostic prediction.
 ## 🔬 Methodology
 
 ### 1. Exploratory Data Analysis (EDA)
-- **Class Distribution:** Evaluated potential skewness in the target variable.
-- **Feature Correlation:** Generated heatmaps to identify redundant features that might influence tree splitting logic.
+- **Class Distribution:** Evaluated target balance.
+- **Feature Correlation:** Heatmaps to identify redundant features.
 
 ### 2. Decision Tree Implementation
-- **Hyperparameter Space:** Explored `criterion` (Gini, Entropy), `max_depth`, `min_samples_split`, and `min_samples_leaf`.
-- **Tuning:** Used `GridSearchCV` with 5-Fold CV to find the "Goldilocks" depth (sufficient complexity without overfitting).
+- **Hyperparameters:** `criterion` (Gini/Entropy), `max_depth`, `min_samples_split`.
+- **Tuning:** `GridSearchCV` with 5-Fold CV to prevent overfitting.
 
 ### 3. Random Forest (Ensemble)
-- **Extending DTs:** Built a Bagging-based ensemble using bootstrap aggregation.
-- **Hyperparameter tuning:** Focused on `n_estimators`, `max_features`, and `bootstrap`.
-- **Generalization:** Observed how the committee of trees produces a smoother decision boundary compared to a single volatile tree.
+- **Strategy:** Bagging (Bootstrap Aggregation).
+- **Tuning:** `n_estimators`, `max_features`.
+- **Observation:** The ensemble approach produces smoother decision boundaries and higher generalization.
 
 ---
 
-## 📁 Results & Implementation
-The full analysis, visualization, and metric tables are documented in the Jupyter Notebook.
+## 📁 Results & Visualizations
+Comparative metrics and plots are generated in the notebook.
 
 - **Notebook:** [experiment6.ipynb](./experiment6.ipynb)
-- **Visualizations:**
-    - `Images/PNG/`: Standard plots (ROC, Confusion Matrix).
-    - `Images/EPS/`: Vector graphics for professional report scaling.
+- **Visualizations:** `Images/PNG/` and `Images/EPS/`.
+    - `class_distribution.png`
+    - `correlation_heatmap.png`
+    - `confusion_matrices.png`
+    - `roc_comparison.png`
 
 ---
 
