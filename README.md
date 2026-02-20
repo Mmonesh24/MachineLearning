@@ -41,6 +41,11 @@ A technical repository documenting systematic research into statistical learning
 *   **Key Contributions**: Custom implementation of Perceptron Learning Algorithm (OvR). Design and tuning of deep MLP architectures (500+ neurons, Tanh/ReLU activations, Adam optimizer).
 *   **Results**: Achieved a 4x performance gain over linear models on unstructured handwritten character recognition.
 
+### [Exp 6: Ensemble Dynamics & Tree-based Learning](./Assignment_6/)
+*   **Objective**: Comparative study of single Decision Trees vs. Random Forest ensembles.
+*   **Key Contributions**: Recursive feature splitting optimization, 5-Fold Cross-Validation for tree regularization. Implementation of bootstrap aggregation (Bagging) to minimize variance.
+*   **Discovery**: Validated the "Wisdom of the Crowd" through RF, achieving superior generalization on high-dimensional biomedical data (WDBC).
+
 ---
 
 ## 🛠️ Technological Stack
