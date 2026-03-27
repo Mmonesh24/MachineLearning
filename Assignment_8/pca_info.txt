@@ -1,0 +1,2 @@
+Components:7
+Variance:95.90
